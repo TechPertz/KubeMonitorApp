@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    release: prom-stack
+  name: custom-alerts
+  namespace: default
+spec:
+  groups:
+  - name: custom.rules
+    rules:
+    - alert: HighPodRestarts
+      expr: increase(kube_pod_container_status_restarts_total[10m]) > 5
+      for: 10m
+      labels:
+        severity: critical
+      annotations:
+        summary: High restart rate detected in pod {{ $labels.pod }}
+        description: "{{ $labels.pod }} in namespace {{ $labels.namespace }} has restarted {{ $value }} times in the last 10 minutes."
