@@ -4,8 +4,8 @@ from bson.objectid import ObjectId
 from bson.errors import InvalidId
 import os
 
-mongodb_host = os.environ.get('MONGO_HOST', 'localhost')
-mongodb_port = int(os.environ.get('MONGO_PORT', '27017'))
+mongodb_host = os.environ.get('MONGO_SERVICE_SERVICE_HOST', 'localhost')
+mongodb_port = int(os.environ.get('MONGO_SERVICE_PORT_27017_TCP_PORT', '27017'))
 client = MongoClient(mongodb_host, mongodb_port)
 db = client.camp2016
 todos = db.todo

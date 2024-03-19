@@ -1,18 +1,13 @@
-version: '3.8'
+version: '3'
 services:
-  web:
-    build: .
+  app:
+    image: todo_app
     ports:
-      - "5001:5000"
-    environment:
-      - MONGO_HOST=mongodb
-      - MONGO_PORT=27017
+      - "5000:5000"
     depends_on:
-      - mongodb
-  mongodb:
+      - mongo
+  mongo:
     image: mongo
-    ports:
-      - "27017:27017"
     volumes:
       - mongo-data:/data/db
 
