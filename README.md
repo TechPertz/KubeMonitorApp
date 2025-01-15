@@ -5,15 +5,14 @@ A Flask-MongoDB-based web application deployed using Docker and Kubernetes, show
 1. [Introduction](#introduction)  
 2. [Features](#features)  
 3. [Technologies Used](#technologies-used)  
-4. [Architecture](#architecture)  
-5. [Setup Instructions](#setup-instructions)  
-6. [Deployment](#deployment)  
+4. [Setup Instructions](#setup-instructions)  
+5. [Deployment](#deployment)  
     - [Local Deployment with Minikube](#local-deployment-with-minikube)  
     - [Cloud Deployment with AWS EKS](#cloud-deployment-with-aws-eks)  
-7. [Monitoring and Alerting](#monitoring-and-alerting)  
-8. [Results](#results)  
-9. [Contributing](#contributing)  
-10. [License](#license)  
+6. [Monitoring and Alerting](#monitoring-and-alerting)  
+7. [Results](#results)  
+8. [Contributing](#contributing)  
+9. [License](#license)  
 
 ## Introduction  
 **KubeMonitorApp** demonstrates the power of containerized deployments with Docker and Kubernetes. The project involves a Flask-based backend connected to MongoDB for persistent data storage. It showcases modern cloud-native practices like scaling, health monitoring, rolling updates, and real-time alerting.
@@ -32,9 +31,6 @@ A Flask-MongoDB-based web application deployed using Docker and Kubernetes, show
 - **Orchestration**: Kubernetes (Minikube, AWS EKS)  
 - **Monitoring**: Prometheus, Slack  
 - **Version Control**: Git  
-
-## Architecture  
-![Architecture Diagram](#) *(Insert your architecture diagram here)*  
 
 ## Setup Instructions  
 
@@ -125,4 +121,4 @@ kubectl delete pod pod-name
 Contributions are welcome! Please open an issue or submit a pull request for any improvements.  
 
 ## License  
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.  
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
